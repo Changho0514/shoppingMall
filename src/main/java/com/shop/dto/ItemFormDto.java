@@ -1,11 +1,10 @@
 package com.shop.dto;
 
 import com.shop.entity.Item;
-import com.shop.entity.ItemSellStatus;
+import com.shop.constant.ItemSellStatus;
 import lombok.Getter;
 import lombok.Setter;
 import org.modelmapper.ModelMapper;
-import org.springframework.ui.Model;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -24,7 +23,7 @@ public class ItemFormDto {
     @NotNull(message = "가격은 필수 입력 값입니다.")
     private Integer price;
 
-    @NotBlank(message = "이름은 필수 입력 값입니다.")
+    @NotBlank(message = "상품 상세는 필수 입력 값입니다.")
     private String itemDetail;
 
     @NotNull(message = "재고는 필수 입력 값입니다.")
